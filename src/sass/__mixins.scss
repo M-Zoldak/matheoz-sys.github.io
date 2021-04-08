@@ -1,0 +1,7 @@
+@mixin hero-img1($photo) {
+    background-image: $black-gradient, url($photo);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}

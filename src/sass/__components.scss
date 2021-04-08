@@ -1,0 +1,149 @@
+.wrapper {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.range {
+    position: fixed;
+    background-color: $main-color;
+    height: 2px;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+}
+
+h1,
+h2,
+h3,
+h4,
+label {
+    font-family: Poppins, 'sans-serif';
+}
+
+input,
+textarea {
+    font-family: Raleway, 'sans-serif';
+    font-size: .9em;
+}
+
+.section-heading {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    padding: 7rem 0;
+    color: $main-color;
+    letter-spacing: 2px;
+
+    &::after,
+    &::before {
+        content: '';
+        height: 3px;
+        background-color: rgba(250, 250, 250, .9);
+        box-shadow: 0 0 3px white;
+        border-radius: 100%;
+        width: 90%;
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &::before {
+        top: 15%;
+    }
+}
+
+.box {
+    border-radius: 6px;
+    border: 1px solid $dark-white;
+    box-shadow: 0 0 7px $font-color;
+}
+
+.Poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.Raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.bg-1 {
+    background: rgba(0, 0, 0, .5);
+}
+
+.bg-1-io {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5)10%, rgba(0, 0, 0, .5) 90%, rgba(0, 0, 0, 0) 100%)
+}
+
+.bg-1-in {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5)10%, )
+}
+
+h3 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: none;
+
+    &-down {
+        @extend .arrow;
+        border-left: .5em solid transparent;
+        border-right: .5em solid transparent;
+        border-top: .5em solid currentColor;
+    }
+
+    &-right {
+        @extend .arrow;
+
+        border-bottom: .3em solid transparent;
+        border-top: .3em solid transparent;
+        border-left: .3em solid currentColor;
+    }
+
+    &-left {
+        @extend .arrow;
+        border-bottom: .3em solid transparent;
+        border-top: .3em solid transparent;
+        border-right: .3em solid currentColor;
+    }
+
+    &-up {
+        @extend .arrow;
+        border-left: .5em solid transparent;
+        border-right: .5em solid transparent;
+        border-bottom: .5em solid currentColor;
+    }
+}
+
+@media (min-width:900px) {
+    .section-heading {
+        font-size: 4.2rem;
+
+        &::after,
+        &::before {
+            height: 3px;
+            width: 85%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        padding: 0;
+    }
+
+    .section-heading {
+
+        &::after,
+        &::before {
+            width: 100%;
+            max-width: 1200px;
+        }
+    }
+}

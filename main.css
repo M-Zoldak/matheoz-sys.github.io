@@ -85,7 +85,8 @@
   z-index: 10;
   width: 100%;
   height: 100%;
-  transition: .4s; }
+  transition: .4s;
+  border-bottom: 2px solid #5085E6; }
   .nav-top .top {
     background-color: #111;
     height: 100%;
@@ -305,7 +306,7 @@ main {
   margin: auto; }
 
 .introduce {
-  background-image: radial-gradient(rgba(15, 15, 15, 0.5), rgba(0, 0, 0, 0.9)), url("/dist/img/internet_640.jpg");
+  background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(0, 0, 0, 0.3)), url("/dist/img/header-640.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -502,7 +503,7 @@ main {
     .projects__content-buttons a {
       text-align: center;
       display: block;
-      font-size: 2rem;
+      font-size: 1.8rem;
       padding: 1rem;
       white-space: nowrap;
       width: 48%;
@@ -511,7 +512,8 @@ main {
       color: white;
       margin-top: 2rem;
       cursor: pointer;
-      transition: .2s; }
+      transition: .2s;
+      text-decoration: none; }
       .projects__content-buttons a:hover {
         background-color: #345594; }
 
@@ -632,6 +634,11 @@ main {
 
 @media (min-width: 992px) {
   .introduce {
+    background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(0, 0, 0, 0.3)), url("/dist/img/header-1920.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
     margin-top: 50px; }
     .introduce-hero {
       min-height: 100vh; }
@@ -683,7 +690,10 @@ main {
     .realization__box:nth-of-type(odd) {
       transform: translateY(-10%); }
     .realization__box.active {
-      transform: translateY(0%); } }
+      transform: translateY(0%); }
+  .projects__content-desc p {
+    text-align: unset;
+    margin-right: 5vw; } }
 
 @-webkit-keyframes showInput {
   0% {

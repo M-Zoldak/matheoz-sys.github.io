@@ -328,9 +328,8 @@ main {
 
             img {
                 transition: .3s;
-                height: 100%;
                 width: 100%;
-
+                transform: scale(0);
             }
 
         }
@@ -338,6 +337,10 @@ main {
         &-desc {
             margin: 1rem 0;
             line-height: 1.4em;
+
+            p {
+                opacity: 0;
+            }
         }
 
         &-buttons {
@@ -359,10 +362,43 @@ main {
                 cursor: pointer;
                 transition: .2s;
                 text-decoration: none;
+                opacity: 0;
 
                 &:hover {
                     background-color: $main-color-dark;
                 }
+            }
+        }
+
+    }
+
+    &__list-item {
+        &--opened {
+            .projects__content-photo {
+                img {
+                    transform: scale(1);
+                    transition: transform 1s;
+                    transform-origin: center;
+                    transition-delay: .8s;
+                }
+            }
+
+            .projects__content-desc p {
+                opacity: 1;
+                transition: opacity .8s;
+                transition-delay: 1s;
+            }
+
+            .projects__content-buttons a:nth-child(1) {
+                opacity: 1;
+                transition: opacity 1s;
+                transition-delay: 1.2s;
+            }
+
+            .projects__content-buttons a:nth-child(2) {
+                opacity: 1;
+                transition: opacity 1s;
+                transition-delay: 1.4s;
             }
         }
     }

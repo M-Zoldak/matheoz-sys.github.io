@@ -77,13 +77,13 @@ projects.forEach(el=>{
     el.firstElementChild.addEventListener('click', ()=>{
         if(el.classList.contains('projects__list-item--opened')){
             el.classList.remove('projects__list-item--opened');
-            el.style.height = el.firstElementChild.offsetHeight + "px";
+            el.style.height = Math.floor(el.firstElementChild.offsetHeight) + "px";
         }else{
             projects.forEach(el=>{
                 el.classList.remove('projects__list-item--opened');
-                el.style.height = el.firstElementChild.offsetHeight + "px";
+                el.style.height = Math.floor(el.firstElementChild.offsetHeight) + "px";
             });
-            let hei = el.firstElementChild.offsetHeight + el.lastElementChild.offsetHeight;
+            let hei = Math.floor(el.firstElementChild.offsetHeight + el.lastElementChild.offsetHeight);
             el.style.height = `${hei}px`;
             el.classList.toggle('projects__list-item--opened');
     }})
@@ -107,3 +107,9 @@ window.addEventListener('scroll', ()=>{
 
 // FOOTER - TIME
 const date = document.querySelector('.footer-date').textContent = new Date().getFullYear();
+
+
+//DIST SECTION
+
+window.addEventListener('click', e=>console.log(e.target))
+window.addEventListener('touchstart', e=>console.log(e.targetTouches))

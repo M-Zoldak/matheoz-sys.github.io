@@ -309,7 +309,8 @@ main {
   background-size: cover;
   background-position: center;
   height: 100%;
-  position: relative; }
+  position: relative;
+  min-height: 80vh; }
   .introduce-hero {
     padding: 0 0.6em;
     display: flex;
@@ -322,6 +323,10 @@ main {
     .introduce-text h2,
     .introduce-text p {
       color: #eee; }
+    .introduce-text p.color {
+      display: inline;
+      font-size: .9em;
+      color: #5085E6; }
     .introduce-text h1,
     .introduce-text h2 {
       padding: .7em;
@@ -446,7 +451,8 @@ main {
     border-bottom: 1px solid black;
     cursor: pointer; }
     .projects__list-title a {
-      font-size: 1.1em;
+      height: 100%;
+      font-size: 2em;
       text-decoration: none;
       color: currentColor;
       margin-left: .5rem;
@@ -460,7 +466,7 @@ main {
   .projects__list-right {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-basis: 20%;
     flex-shrink: 0; }
 
@@ -560,6 +566,10 @@ main {
       transition: .2s; }
       .contact__form-button:hover {
         background-color: #345594; }
+
+@media (max-width: 300px) {
+  html {
+    font-size: 50%; } }
 
 @media (min-width: 576px) {
   .technologies__card {

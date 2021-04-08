@@ -50,6 +50,7 @@ main {
 // HOME
 .introduce {
     @include hero-img1('/dist/img/internet_640.jpg');
+    min-height: 80vh;
 
     &-hero {
         padding: 0 0.6em;
@@ -67,6 +68,12 @@ main {
         h2,
         p {
             color: $font-color;
+        }
+
+        p.color {
+            display: inline;
+            font-size: .9em;
+            color: $main-color;
         }
 
         h1,
@@ -263,7 +270,8 @@ main {
             cursor: pointer;
 
             a {
-                font-size: 1.1em;
+                height: 100%;
+                font-size: 2em;
                 text-decoration: none;
                 color: currentColor;
                 margin-left: .5rem;
@@ -284,7 +292,7 @@ main {
         &-right {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end;
             flex-basis: 20%;
             flex-shrink: 0;
         }
@@ -446,6 +454,12 @@ main {
                 background-color: $main-color-dark;
             }
         }
+    }
+}
+
+@media (max-width:300px) {
+    html {
+        font-size: 50%;
     }
 }
 

@@ -87,7 +87,7 @@
         background-color: #111;
         height: 100%;
         float: left;
-        width: 75%;
+        width: 85%;
 
         &__ul {
             display: flex;
@@ -175,6 +175,14 @@ footer {
 @media (max-width: 300px) {
     h2 {
         letter-spacing: 0;
+    }
+}
+
+@media(min-width: 500px) {
+    .nav-top {
+        .top {
+            width: 75%;
+        }
     }
 }
 

@@ -91,7 +91,7 @@
     background-color: #111;
     height: 100%;
     float: left;
-    width: 75%; }
+    width: 85%; }
     .nav-top .top__ul {
       display: flex;
       flex-direction: column;
@@ -148,6 +148,10 @@ footer {
 @media (max-width: 300px) {
   h2 {
     letter-spacing: 0; } }
+
+@media (min-width: 500px) {
+  .nav-top .top {
+    width: 75%; } }
 
 @media (min-width: 992px) {
   .burger {
@@ -306,12 +310,15 @@ main {
   margin: auto; }
 
 .introduce {
-  background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(0, 0, 0, 0.3)), url("/dist/img/header-640.jpg");
+  display: flex;
+  background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), url("/dist/img/header-640.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
   position: relative;
-  min-height: 80vh; }
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center; }
   .introduce-hero {
     padding: 0 0.6em;
     display: flex;
@@ -490,13 +497,15 @@ main {
       transform: scale(1.01);
       opacity: .8; }
     .projects__content-photo img {
-      transition: .3s;
+      transform-origin: top;
+      transition: .8s;
       width: 100%;
       transform: scale(0); }
   .projects__content-desc {
     margin: 1rem 0;
     line-height: 1.4em; }
     .projects__content-desc p {
+      transition: .5s;
       opacity: 0; }
   .projects__content-buttons {
     display: flex;
@@ -514,7 +523,7 @@ main {
       color: white;
       margin-top: 2rem;
       cursor: pointer;
-      transition: .2s;
+      transition: .3s;
       text-decoration: none;
       opacity: 0; }
       .projects__content-buttons a:hover {
@@ -658,7 +667,7 @@ main {
 
 @media (min-width: 992px) {
   .introduce {
-    background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(0, 0, 0, 0.3)), url("/dist/img/header-1920.jpg");
+    background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), url("/dist/img/header-1920.jpg");
     background-size: cover;
     background-position: center;
     height: 100%;

@@ -49,8 +49,11 @@ main {
 
 // HOME
 .introduce {
+    display: flex;
     @include hero-img1('/dist/img/header-640.jpg');
     min-height: 80vh;
+    align-items: center;
+    justify-content: center;
 
     &-hero {
         padding: 0 0.6em;
@@ -327,7 +330,8 @@ main {
             }
 
             img {
-                transition: .3s;
+                transform-origin: top;
+                transition: .8s;
                 width: 100%;
                 transform: scale(0);
             }
@@ -339,6 +343,7 @@ main {
             line-height: 1.4em;
 
             p {
+                transition: .5s;
                 opacity: 0;
             }
         }
@@ -360,7 +365,7 @@ main {
                 color: white;
                 margin-top: 2rem;
                 cursor: pointer;
-                transition: .2s;
+                transition: .3s;
                 text-decoration: none;
                 opacity: 0;
 
@@ -403,21 +408,6 @@ main {
         }
     }
 }
-
-// @keyframes animin {
-//     0% {
-//         transform: scale(0);
-//     }
-
-//     80% {
-//         transform: scale(1.1);
-//     }
-
-
-//     100% {
-//         transform: scale(1)
-//     }
-// }
 
 //CONTACT FORM
 

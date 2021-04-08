@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Time Counter</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="photo">
+            <button class="optionsBtn" onclick="turnClasses()">
+                <div class="btnInside"></div>
+            </button>
+            <div class="options">
+                <form class="form" onsubmit="countTime()">
+                    <p>Choose the date, you're waiting for</p>
+                    <div class="timeInput">
+                        <div class="timeInput__item">
+                            <label for="day">Day</label>
+                            <input type="number" name="day" id="day" min="1" max="31">
+                        </div>
+                        <div class="timeInput__item">
+                            <label for="month">Month</label>
+                            <select name="month" id="month">
+                                <option value="0">January</option>
+                                <option value="1">February</option>
+                                <option value="2">March</option>
+                                <option value="3">April</option>
+                                <option value="4">May</option>
+                                <option value="5">June</option>
+                                <option value="6">July</option>
+                                <option value="7">August</option>
+                                <option value="8">September</option>
+                                <option value="9">Oktober</option>
+                                <option value="10">November</option>
+                                <option value="11">December</option>
+                            </select>
+                        </div>
+                        <div class="timeInput__item">
+                            <label for="year">Year</label>
+                            <input type="number" name="year" id="year" max="9999">
+                        </div>
+                        <div class="timeInput__item">
+                            <label for="hour">Hour</label>
+                            <input type="number" name="hour" id="hour" max="23">
+                        </div>
+                        <div class="timeInput__item">
+                            <label for="minutes">Minutes</label>
+                            <input type="number" name="minutes" id="minutes" max="59">
+                        </div>
+                    </div>
+                    <p class="warning">WAHT THE FAK</p>
+                    <p>What are you waiting for?</p>
+                    <input type="text" name="occasion" id="occasion">
+                    <div class="buttons">
+                        <button class="submit" onsubmit="countTime()">Submit <div class="arrow-right"></div></button>
+                        <button class="reset">Reset</button>
+                    </div>
+                </form>
+                <div class="empty active"></div>
+            </div>
+        </div>
+        <div class="timebox">
+            <h1>Here Goes a title</h1>
+            <div class="times">
+                <div class="timediv">
+                    <div class="days">13</div>
+                    <p>Days</p>
+                </div>
+                <div class="timediv">
+                    <div class="hours">146</div>
+                    <p>Hours</p>
+                </div>
+                <div class="timediv">
+                    <div class="minutes">1</div>
+                    <p>Minutes</p>
+                </div>
+                <div class="timediv">
+                    <div class="seconds">1</div>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

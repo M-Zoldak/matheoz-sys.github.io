@@ -114,24 +114,22 @@ main {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        background-color: rgba(221, 221, 221, 0.9);
+        background-color: #fff;
         margin: 4rem auto;
         width: 90%;
-        border-radius: 5px;
-        // padding: 1rem 1rem;
 
         transition: .6s;
 
         &:first-of-type {
-            box-shadow: 0 0 12px #e85326;
+            box-shadow: 0 0 12px 4px #e85326, 0 0 6px 2px #e85326 inset;
         }
 
         &:nth-of-type(2) {
-            box-shadow: 0 0 12px #0f83c6;
+            box-shadow: 0 0 12px 4px #0f83c6, 0 0 6px 2px #0f83c6 inset;
         }
 
         &:nth-of-type(3) {
-            box-shadow: 0 0 12px #dcb404;
+            box-shadow: 0 0 12px 4px #dcb404, 0 0 6px 2px #dcb404 inset;
         }
 
         h3 {
@@ -157,6 +155,7 @@ main {
         &-text {
             text-align: center;
             font-size: 1.2em;
+            font-weight: 500;
             padding: 2rem;
             flex-grow: 100;
 
@@ -193,38 +192,16 @@ main {
     &__box {
         position: relative;
         padding: 2rem;
-        padding-top: 6rem;
-        margin: 8rem 0;
+        margin: 3rem 0;
         text-align: center;
         border-radius: 6px;
-        border: 1px solid $dark-white;
-        box-shadow: 0 0 7px $font-color;
         background: rgba(0, 0, 0, .5);
         transition: .5s;
         opacity: 0;
         transform: translateX(100%);
 
-        i {
-            border: 1px solid $dark-white;
-            box-shadow: 0 0 7px $font-color;
-            display: block;
-            background: radial-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
-            width: 11rem;
-            height: 11rem;
-            font-size: 5rem;
-            position: absolute;
-            left: 50%;
-            top: 0;
-            color: $main-color;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         h3 {
-            padding: 2.4rem 0;
+            color: $main-color;
             font-size: 1.6em;
             letter-spacing: 2px;
         }
@@ -540,9 +517,12 @@ main {
             margin-left: 0;
             margin-right: 0;
 
+            &:nth-of-type(5) {
+                transform: translate(0, 0%);
+            }
+
             h3 {
-                padding: 6rem 0;
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
             }
 
             &-text {

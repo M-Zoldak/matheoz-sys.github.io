@@ -29,6 +29,7 @@ function codeCompiler(done){
     src(paths.sass)
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
+    .pipe(dest('./'))
     .pipe(sourcemaps.init())
     .pipe(cssnano())
     .pipe(rename(function (path) {

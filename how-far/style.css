@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+/*OVERALL*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 3px solid black;
+    box-shadow: 0 0 10px black;
+    border-radius: 16px;
+    max-width: 800px;
+}
+
+.photo {
+    height: 60vh;
+    width: 100%;
+    background-image: url('2001-20-questions.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.timebox {
+    height: 30vh;
+    text-align: center;
+    padding: 1rem;
+}
+
+.timebox h1 {
+    padding: 1rem 0;
+}
+
+.times {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.timediv {
+    min-width: 20%;
+    border: 2px solid black;
+    border-radius: 6px;
+    padding-top: 2rem;
+}
+
+.timediv>div {
+    font-size: 4rem;
+}
+
+.timediv>p {
+    padding: 2rem 0 1rem;
+}
+
+/* OPTIPNS BTN & FORM*/
+
+.optionsBtn {
+    width: 41px;
+    height: 41px;
+    border: 1px solid black;
+    background: purple;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    opacity: unset;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 5;
+    border-radius: 4px;
+}
+
+.btnInside {
+    position: absolute;
+    height: 3px;
+    background-color: white;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+
+.btnInside::after,
+.btnInside::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: .3s;
+}
+
+.btnInside::before {
+    top: 10px
+}
+
+.btnInside::after {
+    bottom: 10px
+}
+
+.optionsBtn.active .btnInside::before {
+    top: 50%;
+    transform: translateX(-50%) rotate(-225deg);
+    height: 2px;
+}
+
+.optionsBtn.active .btnInside::after {
+    height: 2px;
+    top: 50%;
+    transform: translateX(-50%) rotate(225deg);
+}
+
+.optionsBtn.active .btnInside {
+    height: 0;
+    ;
+}
+
+.optionsBtn.active {
+    background-color: crimson;
+}
+
+/*FORM*/
+
+.options {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: linear-gradient(45deg, #1111, #4444);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.empty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+}
+
+.empty.active {
+    z-index: 3;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    transition: .5s;
+    margin-left: 5%;
+    width: 75%;
+    opacity: 0;
+}
+
+.form.active {
+    opacity: 1;
+    z-index: 5;
+}
+
+.form p {
+    text-align: center;
+}
+
+p.warning {
+    visibility: visible;
+    padding: 0.2rem 0;
+    font-size: .8em;
+    color: red;
+}
+
+.form .timeInput__item {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form .timeInput__item:nth-of-type(2) {
+    transform: translateY(50%);
+}
+
+.form input,
+.form select {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border: none;
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.form select {
+    cursor: pointer;
+}
+
+.form select option {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+.form input:hover,
+.form select:hover {
+    background-color: rgba(100, 100, 100, .4);
+}
+
+.form input#occasion {
+    margin: 1rem auto;
+    padding: 1rem 0;
+    font-size: 1.2em;
+    width: 80%;
+}
+
+.form .buttons {
+    margin-top: 1rem;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.form button.reset {
+    flex-basis: 30%;
+}
+
+.form button.submit {
+    flex-basis: 60%;
+}
+
+.form button {
+    color: white;
+    letter-spacing: 2px;
+    padding: 1rem;
+    border: none;
+    background: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+
+.form button:hover {
+
+    background: rgba(0, 0, 0, .9);
+}
+
+.arrow-right {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+
+    border-left: 5px solid white;
+}
+
+.timeInput {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+
+@media (min-width:700px) {
+    .container {
+        margin: 5rem auto;
+        width: 60%;
+    }
+}

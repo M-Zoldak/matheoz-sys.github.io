@@ -85,7 +85,11 @@ projects.forEach(el=>{
             });
             let hei = Math.floor(el.firstElementChild.offsetHeight + el.lastElementChild.offsetHeight);
             el.style.height = `${hei}px`;
-            el.classList.toggle('projects__list-item--opened');
+            el.classList.add('projects__list-item--opened');
+            el.classList.add('projects__list-item--opened-delay');
+            setTimeout(() => {
+                el.classList.remove('projects__list-item--opened-delay');
+            }, 2000);
     }})
 })
 //Contact form

@@ -9,10 +9,8 @@ $bg-color-light2: #bbb;
 
 
 $blue-gradient: linear-gradient(rgba(36, 59, 102, .7), rgba(40, 52, 80, .9));
-$black-gradient: radial-gradient(rgba(15, 15, 15, .9), rgba(80, 133, 230, 0.2));
+$black-gradient: radial-gradient(rgba(15, 15, 15, .9), rgba(80, 133, 230, 0.2)),
+linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .8) 90%, rgba(0, 0, 0, 1) 98%);
 
-$black: #000;
-$light-black: #222;
-$light-black2: #666;
 $dark-white: #bbb;
 $font-color: #eee;

@@ -194,7 +194,7 @@ footer {
 .range {
   position: fixed;
   background-color: #5085E6;
-  height: 2px;
+  height: 1px;
   top: 0;
   left: 0;
   z-index: 5000; }
@@ -311,7 +311,7 @@ main {
 
 .introduce {
   display: flex;
-  background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), url("/dist/img/header-640.jpg");
+  background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 90%, black 98%), url("/dist/img/header-640.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -356,54 +356,56 @@ main {
       text-decoration: underline;
       color: #5085E6; }
 
-.technologies__card {
-  opacity: 0;
-  top: 10%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  margin: 4rem auto;
-  width: 90%;
-  transition: .6s; }
-  .technologies__card:first-of-type {
-    box-shadow: 0 0 12px 4px #e85326, 0 0 6px 2px #e85326 inset; }
-  .technologies__card:nth-of-type(2) {
-    box-shadow: 0 0 12px 4px #0f83c6, 0 0 6px 2px #0f83c6 inset; }
-  .technologies__card:nth-of-type(3) {
-    box-shadow: 0 0 12px 4px #dcb404, 0 0 6px 2px #dcb404 inset; }
-  .technologies__card h3 {
-    text-align: center;
-    font-size: 2.8rem;
-    padding: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 1px; }
-  .technologies__card .html {
-    color: #e85326; }
-  .technologies__card .css {
-    color: #0f83c6; }
-  .technologies__card .js {
-    color: #eac404; }
-  .technologies__card-text {
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 500;
-    padding: 2rem;
-    flex-grow: 100; }
-    .technologies__card-text p {
-      font-family: Raleway;
-      color: black; }
-  .technologies__card-img {
-    margin-top: 2rem;
-    max-height: 300px;
+.technologies {
+  background: linear-gradient(rgba(10, 10, 10, 0.8) 0%, rgba(0, 0, 0, 0) 30%); }
+  .technologies__card {
+    opacity: 0;
+    top: 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin: 4rem auto;
+    width: 90%;
     transition: .6s; }
-  .technologies__card.active {
-    opacity: 1;
-    top: 0; }
-    .technologies__card.active .technologies__card-img {
-      transform: scale(1.1); }
+    .technologies__card:first-of-type {
+      box-shadow: 0 0 12px 4px #e85326, 0 0 6px 2px #e85326 inset; }
+    .technologies__card:nth-of-type(2) {
+      box-shadow: 0 0 12px 4px #0f83c6, 0 0 6px 2px #0f83c6 inset; }
+    .technologies__card:nth-of-type(3) {
+      box-shadow: 0 0 12px 4px #dcb404, 0 0 6px 2px #dcb404 inset; }
+    .technologies__card h3 {
+      text-align: center;
+      font-size: 2.8rem;
+      padding: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px; }
+    .technologies__card .html {
+      color: #e85326; }
+    .technologies__card .css {
+      color: #0f83c6; }
+    .technologies__card .js {
+      color: #eac404; }
+    .technologies__card-text {
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 500;
+      padding: 2rem;
+      flex-grow: 100; }
+      .technologies__card-text p {
+        font-family: Raleway;
+        color: black; }
+    .technologies__card-img {
+      margin-top: 2rem;
+      max-height: 300px;
+      transition: .6s; }
+    .technologies__card.active {
+      opacity: 1;
+      top: 0; }
+      .technologies__card.active .technologies__card-img {
+        transform: scale(1.1); }
 
 .realization .wrapper {
   overflow: hidden;
@@ -493,9 +495,6 @@ main {
     position: relative;
     overflow: hidden;
     transition: .3s; }
-    .projects__content-photo:hover img {
-      transform: scale(1.01);
-      opacity: .8; }
     .projects__content-photo img {
       transform-origin: top;
       transition: .8s;
@@ -523,7 +522,7 @@ main {
       color: white;
       margin-top: 2rem;
       cursor: pointer;
-      transition: .3s;
+      transition: background-color 1s;
       text-decoration: none;
       opacity: 0; }
       .projects__content-buttons a:hover {
@@ -531,24 +530,39 @@ main {
 
 .projects__list-item--opened .projects__content-photo img {
   transform: scale(1);
-  transition: transform 1s;
-  transform-origin: center;
-  transition-delay: .8s; }
+  transition: transform .8s;
+  transform-origin: top; }
+
+.projects__list-item--opened .projects__content-photo:hover img {
+  transform: scale(1.1);
+  opacity: .8; }
 
 .projects__list-item--opened .projects__content-desc p {
   opacity: 1;
-  transition: opacity .8s;
-  transition-delay: 1s; }
+  transition: opacity .8s; }
 
 .projects__list-item--opened .projects__content-buttons a:nth-child(1) {
   opacity: 1;
-  transition: opacity 1s;
-  transition-delay: 1.2s; }
+  transition: opacity .8s, background-color .3s; }
 
 .projects__list-item--opened .projects__content-buttons a:nth-child(2) {
   opacity: 1;
-  transition: opacity 1s;
-  transition-delay: 1.4s; }
+  transition: opacity .8s, background-color .3s; }
+
+.projects__list-item--opened-delay .projects__content-photo img {
+  transition-delay: .2s; }
+
+.projects__list-item--opened-delay .projects__content-photo:hover img {
+  transition-delay: 0s; }
+
+.projects__list-item--opened-delay .projects__content-desc p {
+  transition-delay: .8s; }
+
+.projects__list-item--opened-delay .projects__content-buttons a:nth-child(1) {
+  transition-delay: 1s; }
+
+.projects__list-item--opened-delay .projects__content-buttons a:nth-child(2) {
+  transition-delay: 1.2s; }
 
 .contact {
   padding-bottom: 2rem; }
@@ -667,7 +681,7 @@ main {
 
 @media (min-width: 992px) {
   .introduce {
-    background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), url("/dist/img/header-1920.jpg");
+    background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 90%, black 98%), url("/dist/img/header-1920.jpg");
     background-size: cover;
     background-position: center;
     height: 100%;

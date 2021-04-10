@@ -104,7 +104,7 @@
     .nav-top .top li > a {
       cursor: pointer;
       display: block;
-      color: white;
+      color: #eee;
       text-decoration: none;
       font-size: 2.4rem;
       padding: 2rem 3rem;
@@ -116,8 +116,12 @@
     .nav-top .top__logo {
       padding: 3rem 3rem;
       font-size: 3rem;
-      color: #5085E6;
+      color: #eee;
       border-bottom: 2px solid #5085E6; }
+      .nav-top .top__logo p.color {
+        display: inline;
+        font-size: .9em;
+        color: #5085E6; }
   .nav-top.active {
     left: 0; }
 
@@ -210,6 +214,9 @@ input,
 textarea {
   font-family: Raleway, 'sans-serif';
   font-size: .9em; }
+
+section {
+  padding-top: 5rem; }
 
 .section-heading {
   position: relative;
@@ -311,7 +318,7 @@ main {
 
 .introduce {
   display: flex;
-  background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 90%, black 98%), url("/dist/img/header-640.jpg");
+  background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 90%, black 99%, black 100%), url("/dist/img/header-640.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -357,7 +364,7 @@ main {
       color: #5085E6; }
 
 .technologies {
-  background: linear-gradient(rgba(10, 10, 10, 0.8) 0%, rgba(0, 0, 0, 0) 30%); }
+  background: linear-gradient(rgba(10, 10, 40, 0.7) 0%, rgba(0, 0, 0, 0) 30%); }
   .technologies__card {
     opacity: 0;
     top: 10%;
@@ -496,9 +503,9 @@ main {
     overflow: hidden;
     transition: .3s; }
     .projects__content-photo img {
-      transform-origin: top;
-      transition: .8s;
       width: 100%;
+      transition: .8s;
+      min-height: 100%;
       transform: scale(0); }
   .projects__content-desc {
     margin: 1rem 0;
@@ -528,14 +535,15 @@ main {
       .projects__content-buttons a:hover {
         background-color: #345594; }
 
-.projects__list-item--opened .projects__content-photo img {
-  transform: scale(1);
-  transition: transform .8s;
-  transform-origin: top; }
-
-.projects__list-item--opened .projects__content-photo:hover img {
-  transform: scale(1.1);
-  opacity: .8; }
+.projects__list-item--opened .projects__content-photo {
+  box-shadow: 0 0 6px black; }
+  .projects__list-item--opened .projects__content-photo img {
+    transform: scale(1);
+    transition: transform .8s, opacity .9s;
+    transform-origin: top; }
+  .projects__list-item--opened .projects__content-photo:hover img {
+    transform: scale(1.05);
+    opacity: .8; }
 
 .projects__list-item--opened .projects__content-desc p {
   opacity: 1;
@@ -632,6 +640,12 @@ main {
     margin-right: auto; } }
 
 @media (min-width: 768px) {
+  .introduce {
+    background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 90%, black 99%, black 100%), url("/dist/img/header-1920.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative; }
   .technologies .wrapper {
     display: flex;
     justify-content: space-between;
@@ -681,7 +695,7 @@ main {
 
 @media (min-width: 992px) {
   .introduce {
-    background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 90%, black 98%), url("/dist/img/header-1920.jpg");
+    background-image: radial-gradient(rgba(15, 15, 15, 0.9), rgba(80, 133, 230, 0.2)), linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 90%, black 99%, black 100%), url("/dist/img/header-1920.jpg");
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -715,14 +729,14 @@ main {
       font-size: 1em; }
     .technologies__card-img {
       height: 35vh; }
+    .technologies__card:nth-of-type(2) {
+      order: 4; }
     .technologies__card.active .technologies__card-img {
       transform: scale(1); }
     .technologies__card:hover {
       transform: scale(1.05); }
       .technologies__card:hover .technologies__card-img {
         transform: scale(1.1); }
-    .technologies__card:nth-of-type(2) {
-      order: 4; }
   .contact__field {
     width: 48%; }
     .contact__field--full {

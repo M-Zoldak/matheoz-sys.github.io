@@ -93,19 +93,19 @@ projects.forEach(el=>{
     }})
 })
 //Contact form
-let t= 300;
+let t= 400;
 window.addEventListener('scroll', ()=>{
-    if(scrollY>contact[0].closest('.contact').offsetTop-700 && !contact[0].classList.contains('active')){
+    if(scrollY>contact[0].closest('.contact').offsetTop-100 && !contact[0].classList.contains('active')){
         contact.forEach(el =>{
             setTimeout(() => {
                 el.classList.add('active');
             }, t);
-            t+=300;
+            t+=450;
         });
     }else if(scrollY<contact[0].closest('.contact').offsetTop-1000){
         contact.forEach(el =>{
         el.classList.remove('active');
-        t=300;
+        t=400;
     })}
 })
 

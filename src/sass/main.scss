@@ -116,7 +116,7 @@ main {
 // HTML CSS JS Boxes
 
 .technologies {
-    background: linear-gradient(rgba(10, 10, 10, .8) 0%, rgba(0, 0, 0, 0) 30%);
+    background: linear-gradient(rgba(10, 10, 40, .7) 0%, rgba(0, 0, 0, 0) 30%);
 
     &__card {
         opacity: 0;
@@ -323,14 +323,12 @@ main {
             overflow: hidden;
             transition: .3s;
 
-
             img {
-                transform-origin: top;
-                transition: .8s;
                 width: 100%;
+                transition: .8s;
+                min-height: 100%;
                 transform: scale(0);
             }
-
         }
 
         &-desc {
@@ -375,18 +373,20 @@ main {
     &__list-item {
         &--opened {
             .projects__content-photo {
+                box-shadow: 0 0 6px black;
+
                 img {
                     transform: scale(1);
-                    transition: transform .8s;
+                    transition: transform .8s, opacity .9s;
                     transform-origin: top;
+
                 }
 
                 &:hover {
                     img {
-                        transform: scale(1.1);
+                        transform: scale(1.05);
                         opacity: .8;
                     }
-
                 }
             }
 
@@ -539,6 +539,10 @@ main {
 }
 
 @media (min-width:768px) {
+    .introduce {
+        @include hero-img1('/dist/img/header-1920.jpg');
+    }
+
     .technologies {
         .wrapper {
             display: flex;
@@ -686,6 +690,11 @@ main {
                 height: 35vh;
             }
 
+
+            &:nth-of-type(2) {
+                order: 4;
+            }
+
             &.active {
                 .technologies__card-img {
                     transform: scale(1);
@@ -698,10 +707,6 @@ main {
                 .technologies__card-img {
                     transform: scale(1.1);
                 }
-            }
-
-            &:nth-of-type(2) {
-                order: 4;
             }
         }
     }

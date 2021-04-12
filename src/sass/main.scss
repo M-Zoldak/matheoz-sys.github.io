@@ -292,6 +292,22 @@ main {
             h4 {
                 margin-left: 1em;
             }
+
+            .arrow-down {
+                transition: .5s;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 2px;
+                    width: 0px;
+                    background-color: $main-color-dark2;
+                    transform: translateX(-50%);
+                    transition-duration: .5s;
+                }
+            }
         }
 
         &-right {
@@ -372,6 +388,21 @@ main {
 
     &__list-item {
         &--opened {
+            .projects__list {
+                &-title {
+
+                    .arrow-down {
+                        transform: rotate(-180deg);
+
+                        &::after {
+
+                            transition-duration: .2s;
+                            width: 18px;
+                        }
+                    }
+                }
+            }
+
             .projects__content-photo {
                 box-shadow: 0 0 6px black;
 
@@ -428,6 +459,12 @@ main {
 
                 .projects__content-buttons a:nth-child(2) {
                     transition-delay: 1.2s;
+                }
+
+                .arrow-down {
+                    &::after {
+                        transition-delay: .5s;
+                    }
                 }
             }
         }

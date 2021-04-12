@@ -89,13 +89,13 @@ projects.forEach(el=>{
             el.classList.add('projects__list-item--opened-delay');
             setTimeout(() => {
                 el.classList.remove('projects__list-item--opened-delay');
-            }, 2000);
+            }, 500);
     }})
 })
 //Contact form
-let t= 400;
+let t= 200;
 window.addEventListener('scroll', ()=>{
-    if(scrollY>contact[0].closest('.contact').offsetTop-100 && !contact[0].classList.contains('active')){
+    if(scrollY>contact[0].closest('.contact').offsetTop-150 && !contact[0].classList.contains('active')){
         contact.forEach(el =>{
             setTimeout(() => {
                 el.classList.add('active');
@@ -105,7 +105,7 @@ window.addEventListener('scroll', ()=>{
     }else if(scrollY<contact[0].closest('.contact').offsetTop-1000){
         contact.forEach(el =>{
         el.classList.remove('active');
-        t=400;
+        t=200;
     })}
 })
 

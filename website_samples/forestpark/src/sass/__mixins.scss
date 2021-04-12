@@ -1,0 +1,5 @@
+@mixin heroImage($imgPath){
+    background-image: $black-gradient, url($imgPath);
+    background-size: cover;
+    background-position: center;
+}

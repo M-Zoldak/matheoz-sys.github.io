@@ -444,7 +444,8 @@ main {
 .projects .wrapper h3 {
   font-size: 2.5rem;
   color: #5085E6;
-  padding: 3rem 0 0; }
+  padding: 3rem 0 0;
+  font-family: "Raleway", sans-serif; }
 
 .projects__list {
   margin: 2rem 0 0;
@@ -594,6 +595,48 @@ main {
 .projects__list-item--opened-delay .arrow-down::after {
   transition-delay: .5s; }
 
+.projects .webproject h4 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4em; }
+
+.projects .webproject__photo {
+  width: 100%;
+  overflow: hidden; }
+  .projects .webproject__photo img {
+    image-rendering: optimizeQuality;
+    width: 100%; }
+
+.projects .webproject__desc {
+  margin-top: 1rem;
+  color: #eee;
+  font-family: "Raleway", sans-serif; }
+  .projects .webproject__desc p {
+    margin: .5rem;
+    margin-top: 1rem;
+    font-size: .9em;
+    line-height: 1.6em; }
+  .projects .webproject__desc-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    .projects .webproject__desc-buttons a {
+      text-align: center;
+      display: block;
+      font-size: 1.8rem;
+      padding: 1rem;
+      white-space: nowrap;
+      width: 48%;
+      border: none;
+      background-color: #5085E6;
+      color: white;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: background-color 1s;
+      text-decoration: none; }
+      .projects .webproject__desc-buttons a:hover {
+        background-color: #345594; }
+
 .contact {
   padding-bottom: 2rem; }
   .contact__field {
@@ -713,7 +756,24 @@ main {
         text-align: center;
         align-self: center; }
     .projects__content-buttons a {
-      width: 45%; } }
+      width: 45%; }
+  .projects .webproject {
+    margin-top: 2rem;
+    display: flex; }
+    .projects .webproject__desc {
+      margin-top: 0;
+      padding: 0 1rem;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .projects .webproject__desc p {
+        text-align: left; }
+    .projects .webproject__photo {
+      padding: 0 1rem;
+      width: 50%; }
+      .projects .webproject__photo img {
+        min-height: 100%; } }
 
 @media (min-width: 992px) {
   .introduce {

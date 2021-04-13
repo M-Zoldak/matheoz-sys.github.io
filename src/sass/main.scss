@@ -376,7 +376,6 @@ main {
                 color: white;
                 margin-top: 2rem;
                 cursor: pointer;
-                transition: background-color 1s;
                 text-decoration: none;
                 opacity: 0;
 
@@ -533,7 +532,7 @@ main {
                     color: white;
                     margin-top: 2rem;
                     cursor: pointer;
-                    transition: background-color 1s;
+                    transition: background-color .3s;
                     text-decoration: none;
 
                     &:hover {

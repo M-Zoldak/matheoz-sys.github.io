@@ -543,7 +543,6 @@ main {
       color: white;
       margin-top: 2rem;
       cursor: pointer;
-      transition: background-color 1s;
       text-decoration: none;
       opacity: 0; }
       .projects__content-buttons a:hover {
@@ -641,7 +640,7 @@ main {
         color: white;
         margin-top: 2rem;
         cursor: pointer;
-        transition: background-color 1s;
+        transition: background-color .3s;
         text-decoration: none; }
         .projects .webproject__desc-buttons a:hover {
           background-color: #345594; }

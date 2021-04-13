@@ -145,7 +145,8 @@ a.toTop {
 .logo {
   padding: 2em;
   font-family: 'Open Sans', sans-serif; }
-  .logo i, .logo h1 {
+  .logo i,
+  .logo h1 {
     display: inline;
     font-size: 2.8rem; }
 
@@ -210,9 +211,11 @@ nav.mobile {
         font-family: 'Open-Sans', sans-serif; }
 
 .head {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/dist/img/jungle640.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/website_samples/forestpark/dist/img/jungle640.jpg");
   background-size: cover;
   background-position: center; }
+  .head div {
+    background: url(".."); }
   .head__img {
     position: relative;
     background-position: center;
@@ -235,6 +238,9 @@ nav.mobile {
     font-family: 'Raleway', sans-serif;
     font-weight: 700; }
 
+.about .wrapper {
+  padding: 1rem; }
+
 .about__img {
   width: 100%;
   transition: .5s;
@@ -254,7 +260,7 @@ nav.mobile {
     line-height: 1.6em; }
 
 .journey {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/dist/img/girl1920.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/website_samples/forestpark/dist/img/girl1920.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -398,7 +404,7 @@ nav.mobile {
         height: 50px; }
   .head {
     margin-top: 80px;
-    background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/dist/img/jungle1920.jpg");
+    background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/website_samples/forestpark/dist/img/jungle1920.jpg");
     background-size: cover;
     background-position: center; }
     .head__img {

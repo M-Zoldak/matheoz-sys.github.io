@@ -241,7 +241,7 @@ main {
 .projects {
     .wrapper {
         h3 {
-            font-size: 2.5rem;
+            font-size: 2em;
             color: $main-color;
             padding: 3rem 0 0;
             font-family: $Raleway;
@@ -281,7 +281,6 @@ main {
                 font-size: 2em;
                 text-decoration: none;
                 color: currentColor;
-                margin-left: .5rem;
                 padding: .2rem;
             }
         }
@@ -332,7 +331,7 @@ main {
         h4 {
             display: none;
             text-align: center;
-            font-size: 1.4em;
+            font-size: 1.6em;
             padding: 0.5rem;
         }
 
@@ -340,6 +339,7 @@ main {
             position: relative;
             overflow: hidden;
             transition: .3s;
+            border: 1px solid black;
 
             img {
                 width: 100%;
@@ -476,20 +476,31 @@ main {
     ///////////////////    WEB PROJECTS       //////////////////////////
     //////////////////////////////////////////////////////////////////
     .webproject {
+        margin: 2rem 0 0;
 
         h4 {
             text-align: center;
             font-family: $Raleway;
-            font-size: 1.4em;
+            font-size: 1.5em;
         }
 
         &__photo {
             width: 100%;
             overflow: hidden;
+            transition-delay: .1s;
+            transition: .4s;
 
             img {
-                image-rendering: optimizeQuality;
+                background-color: #fff;
+                height: auto;
                 width: 100%;
+                transition: .5s;
+                object-fit: cover;
+
+                &:hover {
+                    transform: scale(1.05);
+                    opacity: .8;
+                }
             }
         }
 

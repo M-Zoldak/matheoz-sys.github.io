@@ -1,14 +1,17 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+
 @import '__colors.scss';
-body{
+
+body {
     width: 100%;
     background-color: $bg-color;
 }
@@ -19,23 +22,29 @@ body{
 
 //NAV__BAR 
 $navi-height: 65px;
-.logo{
+
+.logo {
     padding: 2em;
     font-family: 'Open Sans', sans-serif;
-    i,h1{
+
+    i,
+    h1 {
         display: inline;
         font-size: 2.8rem;
     }
 }
-.navi{
+
+.navi {
     display: flex;
     height: $navi-height;
     align-items: center;
     justify-content: space-between;
-    nav.desktop{
+
+    nav.desktop {
         display: none;
     }
-    .burger{
+
+    .burger {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -47,18 +56,20 @@ $navi-height: 65px;
         right: 8px;
         border-radius: 50%;
         z-index: 1;
-        i{
+
+        i {
             font-size: 2.8em;
         }
     }
 
 }
-nav.mobile.active{
+
+nav.mobile.active {
     display: fixed;
     top: 0;
 }
 
-nav.mobile{
+nav.mobile {
     transition: .4s;
     position: fixed;
     left: 0;
@@ -68,23 +79,28 @@ nav.mobile{
     width: 100%;
     background-color: #ddd;
     z-index: 1000;
-    .fa-times{
+
+    .fa-times {
         position: absolute;
         top: 22px;
         right: 22px;
         font-size: 4rem;
     }
-    .logo{
+
+    .logo {
         text-align: center;
         margin: 1em auto;
     }
-    .actives{
+
+    .actives {
         list-style-type: none;
         width: 100%;
         text-align: center;
-        li{
+
+        li {
             display: block;
-            a{
+
+            a {
                 display: block;
                 width: 100%;
                 padding: 2em 5em;
@@ -97,15 +113,22 @@ nav.mobile{
         }
     }
 }
+
 //MAIN PHOTO
-.head{
-    @include heroImage('/dist/img/jungle640.jpg');
-    &__img{
+.head {
+    div {
+        background: url('..');
+    }
+
+    @include heroImage('/website_samples/forestpark/dist/img/jungle640.jpg');
+
+    &__img {
         position: relative;
         background-position: center;
         height: 300px;
     }
-    &__texts{
+
+    &__texts {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -113,14 +136,16 @@ nav.mobile{
         padding: 2em;
         color: rgb(255, 255, 255);
     }
-    &__title{
+
+    &__title {
         font-size: 1.3em;
         padding: 1;
         font-weight: 600;
         margin-bottom: .3em;
         font-family: 'Open Sans', sans-serif;
     }
-    &__text{
+
+    &__text {
         font-size: 1.6em;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
@@ -129,39 +154,48 @@ nav.mobile{
 
 
 // SECTION ABOUT FIRM
-.about{
-    &__img{
+.about {
+    .wrapper {
+        padding: 1rem;
+    }
+
+    &__img {
         width: 100%;
         transition: .5s;
         overflow: hidden;
-        &:hover{
+
+        &:hover {
             transform: scale(1.01);
         }
     }
-    &__text{
+
+    &__text {
         padding: 1.2em;
-        &-title{
+
+        &-title {
             font-size: 1.6em;
             margin-bottom: .6em;
             font-family: 'Open-Sans', sans-serif;
         }
-        &-text{
+
+        &-text {
             font-family: 'Raleway', sans-serif;
             font-size: 1.3em;
             line-height: 1.6em;
         }
-    }   
+    }
 }
 
 // PICTURE
 
-.journey{
-    @include heroImage("/dist/img/girl1920.jpg");
+.journey {
+    @include heroImage("/website_samples/forestpark/dist/img/girl1920.jpg");
     width: 100%;
     min-height: 300px;
     margin: 3em 0;
     position: relative;
-    p{
+
+    p {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -179,55 +213,65 @@ nav.mobile{
 
 //OFFERS
 
-.offer{
-    &__text{
+.offer {
+    &__text {
         text-align: center;
         font-size: 2em;
         font-family: 'Raleway', sans-serif;
     }
 
-    .cards{
+    .cards {
         text-align: center;
         font-family: 'Raleway', sans-serif;
-        .card{
+
+        .card {
             border-radius: 8px;
             margin: 3em auto;
             width: 75%;
             box-shadow: 0 0 15px #3e3e3e3e;
             transition: .4s;
-            &:hover{
+
+            &:hover {
                 box-shadow: 0 0 15px #1e1e1e;
-                .card-btn{
+
+                .card-btn {
                     background-color: #111;
                     color: #eee;
                 }
             }
-            &-title{
+
+            &-title {
                 font-size: 2em;
                 padding: .5em
             }
-            &-price{
+
+            &-price {
                 font-size: 5em;
                 font-weight: 700;
                 padding: .8em;
             }
-            &-list{
+
+            &-list {
                 text-align: center;
                 list-style: none;
-                li{
+
+                li {
                     padding: 0.2em;
                     font-size: 1.6em;
                     color: grey;
-                    &.included{
+
+                    &.included {
                         color: green;
                         font-weight: bold;
                     }
-                    i{
+
+                    i {
                         font-size: 1.2em;
                     }
                 }
             }
-            &-btn{
+
+            &-btn {
                 width: 50%;
                 border: none;
                 padding: 1em 2em;
@@ -243,28 +287,32 @@ nav.mobile{
 ////////////////
 //FOOTER
 
-.footer{
+.footer {
     margin-top: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-color: #ddd;
-    &__top-hided{
+
+    &__top-hided {
         display: none;
     }
-    &__bottom{
+
+    &__bottom {
         display: flex;
         justify-content: center;
         align-items: center;
         border-top: 2px solid #aaa;
         background-color: #ddd;
         font-family: 'Raleway', sans-serif;
-        &-text{
+
+        &-text {
             padding: 1em;
         }
     }
-    &__top-logo{
+
+    &__top-logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -273,56 +321,67 @@ nav.mobile{
 
 /////////////////
 // MEDIA QUERIES!
-@media (min-width:576px){
-    .head{
-        &__title{
-            font-size:1.8rem;
+@media (min-width:576px) {
+    .head {
+        &__title {
+            font-size: 1.8rem;
         }
-        &__text{
+
+        &__text {
             font-size: 2.4rem;
         }
     }
 }
 
-@media (min-width:768px){
+@media (min-width:768px) {
     $navi-height: 80px;
-    nav.mobile{
+
+    nav.mobile {
         display: none;
     }
-    .navi{
+
+    .navi {
         background-color: $bg-color;
         overflow: hidden;
         height: $navi-height;
         transition: .3s;
-        .logo{
-            h1{
+
+        .logo {
+            h1 {
                 font-size: 3.3em;
             }
-            i{
+
+            i {
                 font-size: 3.3em;
             }
         }
-        .burger{
+
+        .burger {
             display: none;
         }
-        nav.desktop{
+
+        nav.desktop {
             display: block;
-            ul{
+
+            ul {
                 list-style: none;
                 display: flex;
-                li{
-                    a{
+
+                li {
+                    a {
                         padding: 2em 1.2em;
                         color: black;
                         background-color: $bg-color;
                         text-decoration: none;
                         font-size: 2em;
                         transition: .3s;
-                        &.active{
+
+                        &.active {
                             background-color: black;
                             color: white;
                         }
-                        &:hover{
+
+                        &:hover {
                             background-color: rgb(30, 30, 30);
                             color: white;
                         }
@@ -331,8 +390,8 @@ nav.mobile{
             }
         }
     }
-    
-    .wrapper-navi{
+
+    .wrapper-navi {
         width: 100%;
         background-color: $bg-color;
         position: fixed;
@@ -340,95 +399,115 @@ nav.mobile{
         left: 0;
         z-index: 100;
         transition: .3s;
-        &.distance{
+
+        &.distance {
             opacity: 0.9;
-            .navi{
+
+            .navi {
                 opacity: 0.9;
                 height: 50px
             }
         }
     }
-    
-    
-    .head{
+
+
+    .head {
         margin-top: $navi-height;
-        @include heroImage('/dist/img/jungle1920.jpg');
-        &__img{
+        @include heroImage('/website_samples/forestpark/dist/img/jungle1920.jpg');
+
+        &__img {
             height: 400px;
         }
-        &__title{
+
+        &__title {
             font-size: 2rem;
         }
-        &__text{
+
+        &__text {
             font-size: 2.8rem;
         }
     }
-    .about{
-        .wrapper{
+
+    .about {
+        .wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        &__img{
+
+        &__img {
             display: inline-block;
             width: 49%;
             height: 50%;
         }
-        &__text{
+
+        &__text {
             width: 49%;
             padding: 0 0;
             line-height: 2em;
-            &-title{
-                font-size: 2rem;    
+
+            &-title {
+                font-size: 2rem;
             }
-            p{
+
+            p {
                 padding: 1rem 0;
                 font-size: 1.4rem;
             }
         }
-        
+
     }
-    .journey{
-        p{
+
+    .journey {
+        p {
             font-size: 2.6;
             padding: 2em 2em;
         }
     }
-    .cards{
+
+    .cards {
         display: flex;
         flex-wrap: wrap;
-        .card{
+
+        .card {
             flex-basis: 35%;
         }
     }
-    .footer{
-        &__top{
+
+    .footer {
+        &__top {
             display: flex;
             justify-content: space-evenly;
-            &-logo{
+
+            &-logo {
                 flex-grow: 1000;
             }
         }
-        &__top-hided{
+
+        &__top-hided {
             display: flex;
             flex-basis: 50%;
             justify-content: space-around;
             align-items: flex-start;
             margin: 2em 5em 1em 2em;
         }
-        &__top-list{
-            &-name{
+
+        &__top-list {
+            &-name {
                 font-size: 2.2rem;
 
                 font-weight: 800;
-                
+
             }
-            ul{
+
+            ul {
                 list-style: none;
                 margin: 1em 0;
-                li{
+
+                li {
                     padding: .8em 0;
-                    a{
+
+                    a {
                         text-decoration: none;
                         color: #666;
                         font-size: 1.4em;
@@ -442,37 +521,43 @@ nav.mobile{
     }
 }
 
-@media (min-width:900px){
-    .cards{
+@media (min-width:900px) {
+    .cards {
         justify-content: space-between;
-        .card{
+
+        .card {
             flex-basis: 30%;
             max-width: 300px;
         }
     }
-    .about{
-        &__text{
-            &-title{
+
+    .about {
+        &__text {
+            &-title {
                 font-size: 2.4rem;
             }
-            p{
-                font-size: 1.6rem ;
+
+            p {
+                font-size: 1.6rem;
             }
         }
     }
-    .journey{
+
+    .journey {
         margin: 14em 0 9em;
         min-height: 450px;
-        p{
+
+        p {
             font-size: 3rem;
             letter-spacing: .1em;
             padding: 3em 2em;
         }
     }
 }
-@media(min-width: 1200){
-    .cards{
-        .card{
+
+@media(min-width: 1200) {
+    .cards {
+        .card {
             flex-basis: 27%;
         }
     }

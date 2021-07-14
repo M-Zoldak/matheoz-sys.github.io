@@ -1,21 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --bgcolor: linear-gradient(90deg, rgb(22, 143, 199), rgb(214, 244, 255));
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     font-size: 1.6rem;
 }
 
 /*    NAVBAR     */
 
-.top{
+.top {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -26,15 +29,18 @@ body{
     border-bottom: 1px solid black;
     box-shadow: 0 0 14px black;
 }
-.logo i{
+
+.logo i {
     margin-right: .5rem;
 }
-.buttons{
+
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-button{
+
+button {
     position: relative;
     display: flex;
     justify-content: center;
@@ -48,18 +54,22 @@ button{
     z-index: 2;
     font-size: .6em;
 }
-button.add i{
+
+button.add i {
     color: green;
 }
-button.delete_all i{
+
+button.delete_all i {
     color: crimson;
 }
-button.add::after, button.delete_all::after{
+
+button.add::after,
+button.delete_all::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 1%;
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     background-color: rgba(128, 128, 128, 0.300);
     box-shadow: 0 0 6px darkgrey;
     border-radius: 1000px;
@@ -69,63 +79,82 @@ button.add::after, button.delete_all::after{
     z-index: -13;
 }
 
-button.add:hover::after, button.delete_all:hover::after,button.add:focus::after, button.delete_all:focus::after{
+button.add:hover::after,
+button.delete_all:hover::after,
+button.add:focus::after,
+button.delete_all:focus::after {
     width: 100%;
     background-color: rgba(78, 78, 78, 0.900);
 }
-button.add:hover, button.delete_all:hover, button:hover i,button.add:focus, button.delete_all:focus, button:focus i{
+
+button.add:hover,
+button.delete_all:hover,
+button:hover i,
+button.add:focus,
+button.delete_all:focus,
+button:focus i {
     color: white;
 }
-button i{
+
+button i {
     font-size: .8em;
     margin-right: 1.5rem;
     transition: .4s;
 }
-button:hover i, button:focus i{
-transform: rotate(360deg);
+
+button:hover i,
+button:focus i {
+    transform: rotate(360deg);
 }
 
 /* POP-UP */
 
-.popup{
+.popup {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: .4s;
-    box-shadow:  0 0 15px black;
+    box-shadow: 0 0 15px black;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid black;
-    background: linear-gradient( rgb(22, 143, 199), rgb(214, 244, 255));
+    background: linear-gradient(rgb(22, 143, 199), rgb(214, 244, 255));
 }
-.popup.active{
+
+.popup.active {
+    width: 50%;
+    max-width: 350px;
     transform: translate(-50%, -50%) scale(1);
 }
-form{
+
+form {
     font-family: 'New Tegomin', serif;
     text-align: center;
     padding: 1.6rem;
     font-weight: 600;
 }
-.form__field{
+
+.form__field {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.warning{
+
+.warning {
     color: red;
 }
 
-textarea{
+textarea {
     padding: 0.5rem;
     min-width: 200px;
     max-width: 400px;
     min-height: 75px;
     max-height: 150px;
 }
-.submit{
+
+.submit {
     font-size: 1.8rem;
     background-color: #2229;
     color: #fff;
@@ -137,55 +166,72 @@ textarea{
     border-radius: 25px;
     cursor: pointer;
 }
-.submit:hover{
+
+.submit:hover {
     background-color: #222d;
 }
+
 /* NOTES */
 
-.notices{
+.notices {
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
 }
-.note{
-    width: 21.9vw;
-    height: 21.9vw;
+
+.note {
+    min-width: 150px;
+    min-height: 150px;
+    width: 20vw;
+    height: 20vw;
+    max-width: 200px;
+    max-height: 200px;
     background-color: cornflowerblue;
     margin: 1rem;
     box-shadow: 0 0 5px black;
     overflow: hidden;
 }
-.work{
+
+.work {
     background-color: rgb(22, 143, 199);
 }
-.shopping{
+
+.shopping {
     background-color: greenyellow;
 }
-.home{
+
+.home {
     background-color: yellow;
 }
-.note__title{
+
+.note__title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.300);
 }
-.note__text{
+
+.note__text {
     padding: 1rem;
     max-lines: 5;
 }
-.UIopt{
+
+.UIopt {
     float: right;
 }
-.UIopt i:first-of-type{
+
+.UIopt i:first-of-type {
     margin-right: 1rem;
 }
-.UIopt i{
+
+.UIopt i {
     cursor: pointer;
     transition: .4s;
 }
-.UIopt i:hover, .UIopt i.active{
+
+.UIopt i:hover,
+.UIopt i.active {
     cursor: pointer;
     color: white;
 }

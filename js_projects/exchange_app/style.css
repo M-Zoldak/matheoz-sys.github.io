@@ -8,18 +8,19 @@ body {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(rgb(241, 241, 241), #555);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background: linear-gradient(-45deg, #333, #555);
     text-align: center;
     color: white;
     padding: 1rem;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -28,23 +29,54 @@ h1 {
 
 .exchanger {
     display: flex;
+    /* flex-direction: column; */
+}
+
+@media (max-width: 756px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+
+    .exchanger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .exchanger div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exchanger .cashout {
+        order: 1;
+    }
+
+    div.center button {
+        transform: rotate(90deg);
+        margin: 0;
+    }
+}
+
+.exchanger div input {
+    display: flex;
+    width: 100%;
 }
 
 .exchanger div {
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .cash {
-    display: block;
+    display: flex;
     text-align: center;
     font-size: 2rem;
-    background-color: transparent;
     border: none;
     color: white;
     background-color: #222;
     padding: 1rem;
-    border-radius: 6px;
-    width: 100%;
 }
 
 .currency {
@@ -59,6 +91,14 @@ h1 {
 .currency option,
 .currency option {
     color: black;
+}
+
+.currency option:disabled {
+    background-color: darkgrey;
+}
+
+.currency option:checked {
+    background-color: steelblue;
 }
 
 .center {
@@ -80,10 +120,4 @@ h1 {
 .rate {
     font-size: 1.2em;
     padding: 1rem;
-}
-
-@media (max-width: 900px) {
-    .cash {
-        width: 45vw;
-    }
 }

@@ -9,7 +9,7 @@ const rate = document.querySelector('.rate')
 
 async function fetchData(){
     let api_key = `http://data.fixer.io/api/latest?access_key=1af7c3d26a8325bef12a3ffb63645927&format=1`;
-    let response = await fetch(api_key);
+    let response = await fetch(api_key).catch(err => console.log(err));
     let data = await response.json();
     data = JSON.stringify(data);
     data = JSON.parse(data);
@@ -32,7 +32,7 @@ const check = ()=>{
     }
     rate.textContent = `1 ${from} = ${exchRate.toFixed(4)} ${to}`;
     cashResult.value = (cashInit.value*exchRate).toFixed(4);
-})}
+}).catch(err=>console.log(err))}
 check();
 
 const replaceValues = () =>{

@@ -145,6 +145,9 @@ a.toTop {
 .logo {
   padding: 2em;
   font-family: 'Open Sans', sans-serif; }
+  .logo a {
+    text-decoration: none;
+    color: black; }
   .logo i,
   .logo h1 {
     display: inline;

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
     <title>ExchangeApp</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Exchanger App</h1>
@@ -17,17 +21,17 @@
                 <input type="number" class="cashin cash" onkeyup="check()" onclick="check()" value="1">
                 <select id="currencyin" class="currency" onchange="check()">
                     <option value="EUR">EUR</option>
-                    <option value="USD">USD</option>
-                    <option value="CHF">CHF</option>
-                    <option value="GBP">GBP</option>   
-                    <option value="PLN">PLN</option>
-                  </select>
+                    <option value="USD" disabled="true">USD</option>
+                    <option value="CHF" disabled="true">CHF</option>
+                    <option value="GBP" disabled="true">GBP</option>
+                    <option value="PLN" disabled="true">PLN</option>
+                </select>
             </div>
             <div class="center">
                 <button class="replace" onclick="replaceValues()"><i class="fas fa-exchange-alt"></i></button>
             </div>
             <div class="right">
-                <input type="number" class="cashout cash" contenteditable="false">
+                <input type="number" class="cashout cash" onkeyup="check()" onclick="check()" contenteditable="false">
                 <select id="currencyout" class="currency" onchange="check()">
                     <option value="USD">USD</option>
                     <option value="EUR">EUR</option>
@@ -41,4 +45,5 @@
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
